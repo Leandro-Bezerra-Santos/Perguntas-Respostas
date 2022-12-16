@@ -1,0 +1,12 @@
+
+body{
+    background-color: #eceff1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card{
+    margin-top: 2rem;
+}
+h3{
+    font-weight: 600;
+}

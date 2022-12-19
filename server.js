@@ -20,7 +20,12 @@ connections.authenticate()
 }); 
 
 app.get('/', (request, response) => {
-    response.render('index')
+    //Listando perguntas
+    askModel.findAll({raw: true}).then(ask => {
+        response.render('index', {
+            ask
+        })
+    }) //ele é reponsavél por pegar todas as perguntas do banco de dados
 })
 
 app.get('/ask', (request, response) => {

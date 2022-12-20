@@ -21,7 +21,9 @@ connections.authenticate()
 
 app.get('/', (request, response) => {
     //Listando perguntas
-    askModel.findAll({raw: true}).then(ask => {
+    askModel.findAll({raw: true, order: [
+            ['id','DESC']
+    ]}).then(ask => {
         response.render('index', {
             ask
         })

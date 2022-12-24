@@ -46,4 +46,22 @@ app.post('/askSave', (request, response) =>{
     })
 })
 
+app.get('/ask/:id', (request, response) => {
+    const { id } = request.params;
+
+    //busca no banco de dados
+    askModel.findOne({
+        where: {id}
+    })//Método que busca um ddado com uma codndição
+    .then(ask => {
+        if(ask != undefined){
+            response.render('askFilter',{
+                ask
+            })
+        }else{
+            response.render('404')
+        }
+    })
+})
+
 app.listen(2323, () => console.log('Server in running 👌'));

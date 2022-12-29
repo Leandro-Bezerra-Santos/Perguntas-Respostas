@@ -56,12 +56,12 @@ app.get('/ask/:id', (request, response) => {
     .then(ask => {
         if(ask != undefined){
             response.render('askFilter',{
-                ask
+                ask,
             })
         }else{
             response.render('404')
         }
     })
 })
-
-app.listen(2323, () => console.log('Server in running 👌'));
+1
+app.listen(2323, () => console.log('Server in running 👌'));1

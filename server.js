@@ -1,6 +1,8 @@
 const express = require("express");
+
 const connections = require('./database/connection')
 const askModel = require('./database/ask');
+const Response = require('./database/response')
 
 const app = express();
 const body_parser = require('body-parser')

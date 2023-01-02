@@ -11,7 +11,16 @@
             <div class="card-footer">
                 <p><%= ask.description %></p>
             </div>
+
         </div>
+        <form action="">
+            <h3>Responda</h3>
+
+            <label for="body" class="mt-2">Resposta</label>
+            <textarea name="body" class="form-control " id="" placeholder="Responda a pergunta"></textarea>
+            <input type="hidden" name="ask" value="<%= ask.id %>">
+            <button type="submit" class="btn btn-dark mt-3">Responder</button>
+        </form>
     </div>
 
 </body>
